@@ -32,9 +32,25 @@
         (:name helm
                :after (progn
                         (global-set-key (kbd "C-c h") 'helm-mini)))
+        (:name ack-and-a-half
+               :website "https://github.com/jhelwig/ack-and-a-half"
+               :description "ack.el + full-ack.el = ack-and-a-half.el (Yet another emacs front-end to ack)"
+               :type github
+               :pkgname "jhelwig/ack-and-a-half") 
         (:name projectile
+               :depends helm
+               :website "https://github.com/bbatsov/projectile"
+               :description "Project Interaction Library for Emacs"
+               :type github
+               :pkgname "bbatsov/projectile"
+               :prepare (progn
+                          (autoload 'projectile-mode "projectile" "Minor mode to assist project management and navigation." t)
+                          (autoload 'projectile-global-mode "projectile" nil t)
+                          (autoload 'helm-projectile "helm-projectile" "Use projectile with Helm instead of ido." t))
+               :autoloads nil
                :after (progn
-                        (projectile-global-mode)))))
+                        (projectile-global-mode)
+                        (global-set-key (kbd "C-c p h") 'helm-projectile)))))
 
 (setq general-packages
       '(el-get
@@ -44,7 +60,6 @@
         psvn
         undo-tree
         rainbow-mode
-        perspective
-        ack-and-a-half))
+        perspective))
 
 (provide 'general-packages)

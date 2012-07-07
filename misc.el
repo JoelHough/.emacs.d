@@ -1,3 +1,7 @@
+;; Projectile + Helm
+;(projectile-global-mode)
+;(require 'helm-projectile)
+
 ;; Make auto-complete work with geiser
 (require 'geiser)
 (require 'auto-complete)
