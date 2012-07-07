@@ -44,6 +44,7 @@
         psvn
         undo-tree
         rainbow-mode
-        perspective))
+        perspective
+        ack-and-a-half))
 
 (provide 'general-packages)
