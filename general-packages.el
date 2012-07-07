@@ -50,7 +50,10 @@
                :autoloads nil
                :after (progn
                         (projectile-global-mode)
-                        (global-set-key (kbd "C-c p h") 'helm-projectile)))))
+                        (global-set-key (kbd "C-c p h") 'helm-projectile)))
+        (:name undo-tree
+               :after (progn
+                        (global-undo-tree-mode t)))))
 
 (setq general-packages
       '(el-get
@@ -58,7 +61,6 @@
         auto-complete
         remember
         psvn
-        undo-tree
         rainbow-mode
         perspective))
 
