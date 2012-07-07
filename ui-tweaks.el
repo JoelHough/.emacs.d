@@ -1,3 +1,6 @@
+;; Silence the infernal beeping
+(setq visible-bell 1)
+
 ;; Disengage ludicrous-speed scrolling plus some other scroll tweaks
 (setq scroll-margin 5
       scroll-conservatively 100000
