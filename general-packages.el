@@ -26,7 +26,7 @@
 
 (setq general-packages
       '(el-get
-        egg
+        magit
         auto-complete
         remember
         psvn))
