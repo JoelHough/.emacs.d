@@ -25,7 +25,10 @@
 			(yas/global-mode t)))
         (:name ace-jump-mode
                :after (progn
-                        (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)))))
+                        (global-set-key (kbd "C-c SPC") 'ace-jump-mode)))
+        (:name expand-region
+               :after (progn
+                        (global-set-key (kbd "C-=") 'er/expand-region)))))
 
 (setq general-packages
       '(el-get
