@@ -22,13 +22,17 @@
 			(global-set-key (kbd "C-c T") 'multi-term)))
 	(:name yasnippet
 	       :after (progn
-			(yas/global-mode t)))))
+			(yas/global-mode t)))
+        (:name ace-jump-mode
+               :after (progn
+                        (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)))))
 
 (setq general-packages
       '(el-get
         magit
         auto-complete
         remember
-        psvn))
+        psvn
+        undo-tree))
 
 (provide 'general-packages)
