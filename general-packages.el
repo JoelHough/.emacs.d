@@ -36,6 +36,7 @@
         auto-complete
         remember
         psvn
-        undo-tree))
+        undo-tree
+        rainbow-mode))
 
 (provide 'general-packages)
