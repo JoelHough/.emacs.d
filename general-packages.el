@@ -28,7 +28,10 @@
                         (global-set-key (kbd "C-c SPC") 'ace-jump-mode)))
         (:name expand-region
                :after (progn
-                        (global-set-key (kbd "C-=") 'er/expand-region)))))
+                        (global-set-key (kbd "C-=") 'er/expand-region)))
+        (:name helm
+               :after (progn
+                        (global-set-key (kbd "C-c h") 'helm-mini)))))
 
 (setq general-packages
       '(el-get
