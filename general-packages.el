@@ -31,7 +31,10 @@
                         (global-set-key (kbd "C-=") 'er/expand-region)))
         (:name helm
                :after (progn
-                        (global-set-key (kbd "C-c h") 'helm-mini)))))
+                        (global-set-key (kbd "C-c h") 'helm-mini)))
+        (:name projectile
+               :after (progn
+                        (projectile-global-mode)))))
 
 (setq general-packages
       '(el-get
