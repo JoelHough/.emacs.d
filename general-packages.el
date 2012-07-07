@@ -37,6 +37,7 @@
         remember
         psvn
         undo-tree
-        rainbow-mode))
+        rainbow-mode
+        perspective))
 
 (provide 'general-packages)
