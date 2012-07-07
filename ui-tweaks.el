@@ -1,0 +1,65 @@
+;; Disengage ludicrous-speed scrolling plus some other scroll tweaks
+(setq scroll-margin 5
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1
+      auto-window-vscroll nil
+      mouse-wheel-progressive-speed nil
+      mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+
+;; ido, always
+(ido-mode t)
+(ido-everywhere t)
+(setq ido-enable-flex-matching t
+      ido-create-new-buffer 'always)
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+;(global-set-key (kbd "C-x C-c") 'ido-switch-buffer)
+(global-set-key (kbd "C-x B") 'ibuffer)
+(global-set-key (kbd "C-x C-z") 'ff-find-other-file)
+
+;; Keep backups in one place, and keep several versions
+(setq backup-by-copying t
+      backup-directory-alist `(("." . ,(expand-file-name (concat dotfiles-dir "backups"))))
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t)
+
+(setq bookmark-file-default (expand-file-name "bookmarks" dotfiles-dir)
+      bookmark-save-flag 1)
+
+(setq abbrev-file-name (expand-file-name "abbrev-defs" dotfiles-dir)
+      save-abbrevs t)
+(quietly-read-abbrev-file)
+
+;; Keep emacs Custom-settings in separate file
+(setq custom-file (expand-file-name "custom.el" dotfiles-dir))
+(load custom-file)
+
+;; Saner RE syntax
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
+(global-hl-line-mode t)
+
+(setq line-number-mode t)
+(setq column-number-mode t)
+
+(blink-cursor-mode 0)
+
+(setq inhibit-splash-screen t)
+
+;; No scrollbars or toolbar, but I kinda like the menu bar
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode 1))
+
+;; es and o take too long to type
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Tabs are evil
+(setq-default indent-tabs-mode nil)
+
+;; Use code-pagew so I can see characters like µ
+(require 'code-pages)
+
+(provide 'ui-tweaks)
