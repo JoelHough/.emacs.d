@@ -33,4 +33,10 @@ a sound to be played"
                   text
                   (plist-get (cdr (get (jabber-jid-symbol (jabber-jid-symbol from)) 'avatar)) :file))))
 
+(defun socialize ()
+  "Start up the chatting tools"
+  (interactive)
+  (require 'secrets "secrets.el.gpg")
+  (jabber-connect-all))
+
 (provide 'defuns)
