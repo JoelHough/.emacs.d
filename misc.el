@@ -5,4 +5,6 @@
   '((candidates . (lambda () (append (geiser-completion--complete ac-prefix nil) (geiser-completion--complete ac-prefix t))))))
 (add-hook 'scheme-mode-hook (lambda () (setq ac-sources (append ac-sources '(ac-source-geiser)))))
 
+(add-hook 'jabber-alert-message-hooks 'jabber-notify-popup)
+
 (provide 'misc)
