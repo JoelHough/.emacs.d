@@ -16,8 +16,8 @@ a sound to be played"
                 (concat "mplayer -really-quiet " sound " 2> /dev/null")))
   (if (eq window-system 'x)
     (shell-command (concat "notify-send "
-                     (if icon (concat "-i " icon) "")
-                     " '" title "' '" msg "'"))
+                     (if icon (concat "-i '" icon "'"))
+                     " '" title "' '" msg "'" ))
     ;; text only version
     (message (concat title ": " msg))))
 
@@ -31,7 +31,7 @@ a sound to be played"
                       (format "%s: %s" (jabber-jid-resource from) text)))
     (notify-popup (format "%s" (jabber-jid-displayname from))
                   text
-                  (plist-get (cdr (get (jabber-jid-symbol (jabber-jid-symbol from)) 'avatar)) :file))))
+                  (file-truename (plist-get (cdr (get (jabber-jid-symbol (jabber-jid-symbol from)) 'avatar)) :file)))))
 
 (defun socialize ()
   "Start up the chatting tools"
