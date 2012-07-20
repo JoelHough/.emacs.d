@@ -13,11 +13,11 @@ of the message, MSG is the context. Optionally, you can provide an ICON and
 a sound to be played"
   (interactive)
   (when sound (shell-command
-                (concat "mplayer -really-quiet " sound " 2> /dev/null")))
+                (concat "mplayer -really-quiet " (shell-quote-argument sound) " 2> /dev/null")))
   (if (eq window-system 'x)
     (shell-command (concat "notify-send "
-                     (if icon (concat "-i '" icon "'"))
-                     " '" title "' '" msg "'" ))
+                     (if icon (concat "-i " (shell-quote-argument icon) " "))
+                     (shell-quote-argument title) " " (shell-quote-argument msg)))
     ;; text only version
     (message (concat title ": " msg))))
 
