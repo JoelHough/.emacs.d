@@ -58,10 +58,8 @@
                         (global-undo-tree-mode t)))))
 
 (setq general-packages
-      '(el-get
-        magit
+      '(magit
         auto-complete
-        remember
         psvn
         rainbow-mode
         perspective))
