@@ -39,4 +39,25 @@ a sound to be played"
   (require 'secrets "secrets.el.gpg")
   (jabber-connect-all))
 
+(defun make-capture-frame ()
+  "Create a new frame and run org-capture."
+  (interactive)
+  (let ((frame (make-frame '((name . "capture")
+                             (width . 120)
+                             (height . 15)
+                             (visibility . nil)
+                             (tool-bar-lines . 0)
+                             (menu-bar-lines . 0)
+                             (user-position . t)
+                             (sticky . t)))))
+    (make-frame-visible frame)
+    (select-frame-set-input-focus frame)
+    (setq word-wrap 1)
+    (setq truncate-lines nil)
+    (condition-case nil
+      (flet 
+          ((org-switch-to-buffer-other-window (&rest args) (apply 'switch-to-buffer args)))
+        (org-capture))
+      (error (delete-frame frame)))))
+
 (provide 'defuns)

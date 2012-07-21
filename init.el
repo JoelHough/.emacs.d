@@ -40,6 +40,7 @@
 (el-get 'wait)
 ;; end of el-get stuff
 
+(require 'org-settings)
 (require 'defuns)
 (require 'mode-mappings)
 (require 'extra-keybindings)
