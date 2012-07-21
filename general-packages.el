@@ -25,7 +25,9 @@
 			(yas/global-mode t)))
         (:name ace-jump-mode
                :after (progn
-                        (global-set-key (kbd "C-c SPC") 'ace-jump-mode)))
+                        (require 'ace-jump-mode)
+                        (global-set-key (kbd "C-q") 'ace-jump-mode)
+                        (setq ace-jump-mode-move-keys (string-to-list "neioarstluy;pfwqjhgdm,./zxcvkb"))))
         (:name expand-region
                :after (progn
                         (global-set-key (kbd "C-=") 'er/expand-region)))
