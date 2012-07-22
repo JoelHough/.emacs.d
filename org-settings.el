@@ -60,7 +60,7 @@
 
 (setq org-capture-templates
       `(
-        ("n" "Notes" entry (file+datetree
+        ("n" "Notes" entry (file
                             ,(expand-file-name "notes.org" org-directory))
          "* %^{Description} %^g %?\nAdded: %U")
         ("j" "Journal" entry (file+datetree
