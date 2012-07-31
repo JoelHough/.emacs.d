@@ -65,6 +65,9 @@
          "* %^{Description} %^g %?\nAdded: %U")
         ("j" "Journal" entry (file+datetree
                               ,(expand-file-name "journal.org" org-directory))
-         "** %^{Title} %U\n%?\n")))
+         "** %^{Title} %U\n%?\n")
+        ("t" "Tracker" entry (file
+                              ,(expand-file-name "tracker.org" org-directory))
+         "* %^{Note} %^g %?\nAdded: %U")))
 
 (provide 'org-settings)
