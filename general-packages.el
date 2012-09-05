@@ -62,6 +62,7 @@
         auto-complete
         psvn
         rainbow-mode
-        perspective))
+        perspective
+        emacs-jabber))
 
 (provide 'general-packages)
