@@ -68,6 +68,9 @@
          "** %^{Title} %U\n%?\n")
         ("t" "Tracker" entry (file
                               ,(expand-file-name "tracker.org" org-directory))
+         "* %^{Note} %^g %?\nAdded: %U")
+        ("c" "Class Notes" entry (file
+                                  ,(expand-file-name "school.org" org-directory))
          "* %^{Note} %^g %?\nAdded: %U")))
 
 (provide 'org-settings)
