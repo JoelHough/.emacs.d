@@ -7,4 +7,6 @@
 
 (add-hook 'jabber-alert-message-hooks 'jabber-notify-popup)
 
+(global-auto-complete-mode)
+
 (provide 'misc)
