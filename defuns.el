@@ -1,5 +1,6 @@
 ;; For backing up in say, double quotes or brackets
 (defun backward-up-sexp (arg)
+  "Move backward to quote-like characters"
   (interactive "p")
   (let ((ppss (syntax-ppss)))
     (cond ((elt ppss 3)
