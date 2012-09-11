@@ -17,6 +17,7 @@
         ropemode
         ropemacs
         python-mode
+        haskell-mode
         quack
         geiser))
 
