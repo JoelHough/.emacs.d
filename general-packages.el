@@ -55,7 +55,16 @@
                         (global-set-key (kbd "C-c p h") 'helm-projectile)))
         (:name undo-tree
                :after (progn
-                        (global-undo-tree-mode t)))))
+                        (global-undo-tree-mode t)))
+        (:name edit-server
+               :after (progn
+                        (setq edit-server-new-frame-alist '((name . "editwithemacs")
+                                                            (width . 160)
+                                                            (height . 30)
+                                                            (visibility . nil)
+                                                            (tool-bar-lines . 0)
+                                                            (user-position . t)))
+                        (edit-server-start)))))
 
 (setq general-packages
       '(magit
