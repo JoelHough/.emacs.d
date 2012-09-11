@@ -13,7 +13,7 @@
   (url-retrieve
    "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
    (lambda (s)
-     (end-of-buffer)
+     (goto-char (point-max))
      (eval-print-last-sexp))))
 
 (require 'appearance-packages)
