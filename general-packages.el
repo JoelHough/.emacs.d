@@ -64,6 +64,7 @@
                                                             (visibility . nil)
                                                             (tool-bar-lines . 0)
                                                             (user-position . t)))
+                        (require 'edit-server)
                         (edit-server-start)))))
 
 (setq general-packages
