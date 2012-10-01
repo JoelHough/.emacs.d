@@ -74,4 +74,3 @@ a sound to be played"
         (org-capture))
       (error (delete-frame frame)))))
 
-(provide 'defuns)

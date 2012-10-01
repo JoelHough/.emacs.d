@@ -7,5 +7,3 @@
 (global-set-key [remap backward-up-list] 'backward-up-sexp)
 
 (global-set-key "\C-xQ" 'my-macro-query)
-
-(provide 'extra-keybindings)

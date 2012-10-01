@@ -73,4 +73,3 @@
                                   ,(expand-file-name "school.org" org-directory))
          "* %^{Note} %^g %?\nAdded: %U")))
 
-(provide 'org-settings)

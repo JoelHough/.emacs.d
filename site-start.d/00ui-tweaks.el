@@ -65,4 +65,3 @@
 ;; Use code-pagew so I can see characters like µ
 (require 'code-pages)
 
-(provide 'ui-tweaks)
