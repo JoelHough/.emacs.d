@@ -12,6 +12,7 @@
                :pkgname "paradoxxxzero/jinja2-mode")))
 (setq programming-packages
       '(lua-mode
+        csharp-mode
         pymacs
         rope
         ropemode
@@ -19,6 +20,7 @@
         python-mode
         haskell-mode
         quack
+        ruby-mode
         geiser))
 
 (provide 'programming-packages)
