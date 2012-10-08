@@ -24,12 +24,14 @@
 (setq my-packages '(ace-jump-mode
                     auto-complete
                     autopair
+                    css-mode
                     edit-server
                     expand-region
                     geiser
                     haskell-mode
                     helm
                     highlight-parentheses
+                    inf-ruby
                     lua-mode
                     magit
                     multi-term
@@ -41,11 +43,17 @@
                     quack
                     rainbow-delimiters
                     rainbow-mode
+                    rhtml-mode
                     rope
                     ropemacs
                     ropemode
+                    ruby-compilation
+                    ruby-mode
+                    rvm
+                    textmate
                     slime
                     smex
                     undo-tree
+                    yaml-mode
                     yasnippet
                     zenburn-theme))
