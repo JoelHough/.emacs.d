@@ -52,6 +52,7 @@
                     rvm
                     textmate
                     slime
+                    sunrise-commander
                     smex
                     undo-tree
                     window-number
