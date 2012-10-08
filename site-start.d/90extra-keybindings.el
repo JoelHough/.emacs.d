@@ -7,3 +7,5 @@
 (global-set-key [remap backward-up-list] 'backward-up-sexp)
 
 (global-set-key "\C-xQ" 'my-macro-query)
+
+(global-set-key "\C-c\C-g" 'magit-status)
