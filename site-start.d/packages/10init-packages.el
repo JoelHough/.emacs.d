@@ -54,6 +54,7 @@
                     slime
                     smex
                     undo-tree
+                    window-number
                     yaml-mode
                     yasnippet
                     zenburn-theme))
