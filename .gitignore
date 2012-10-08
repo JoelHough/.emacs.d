@@ -1,0 +1,8 @@
+*
+!.gitignore
+!site-start.d/
+!site-start.d/**
+!el-get-inits/
+!el-get-inits/**
+!init.el
+!custom.el
