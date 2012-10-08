@@ -55,6 +55,7 @@
                     sunrise-commander
                     smex
                     undo-tree
+                    visible-mark
                     window-number
                     yaml-mode
                     yasnippet
