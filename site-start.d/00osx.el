@@ -8,4 +8,5 @@
 (when (equal system-type 'darwin) 
   (setq mac-command-modifier 'control)
   (setq mac-option-modifier 'meta)
-  (set-exec-path-from-shell-PATH))
+  (set-exec-path-from-shell-PATH)
+  (add-to-list 'exec-path "/usr/local/git/bin"))
