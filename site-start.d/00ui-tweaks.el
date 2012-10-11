@@ -27,6 +27,12 @@
       kept-old-versions 2
       version-control t)
 
+;; Put autosave files (ie #foo#) in one place, *not*
+;; scattered all over the file system!
+(defvar autosave-dir (concat dotfiles-dir "autosaves/"))
+(make-directory autosave-dir t)
+(setq auto-save-file-name-transforms `(("\\(?:[^/]*/\\)*\\(.*\\)", (concat autosave-dir "\\1") t)))
+
 (setq bookmark-file-default (expand-file-name "bookmarks" dotfiles-dir)
       bookmark-save-flag 1)
 
