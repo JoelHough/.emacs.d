@@ -2,9 +2,9 @@
 (setq visible-bell 1)
 
 ;; Disengage ludicrous-speed scrolling plus some other scroll tweaks
-(setq scroll-margin 5
-      scroll-conservatively 100000
-      scroll-preserve-screen-position 1
+(setq scroll-margin 2
+      scroll-conservatively 10
+      scroll-preserve-screen-position nil
       auto-window-vscroll nil
       mouse-wheel-progressive-speed nil
       mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
