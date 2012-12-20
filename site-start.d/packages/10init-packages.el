@@ -22,8 +22,10 @@
              :autoloads nil)))
 
 (setq my-packages '(ace-jump-mode
+                    anything-rcodetools
                     auto-complete
                     autopair
+                    coffee-mode
                     css-mode
                     edit-server
                     expand-region
@@ -43,13 +45,14 @@
                     quack
                     rainbow-delimiters
                     rainbow-mode
+                    rcodetools
                     rhtml-mode
+                    rinari
                     rope
                     ropemacs
                     ropemode
                     ruby-compilation
                     ruby-mode
-                    rvm
                     textmate
                     slime
                     sunrise-commander
