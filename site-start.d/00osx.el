@@ -8,6 +8,7 @@
 (when (equal system-type 'darwin) 
   (setq mac-command-modifier 'control)
   (setq mac-option-modifier 'meta)
+  (setq mac-control-modifier 'super)
   (set-exec-path-from-shell-PATH)
   (global-set-key (kbd "C-`") 'other-frame)
   (add-to-list 'exec-path "/usr/local/git/bin"))
