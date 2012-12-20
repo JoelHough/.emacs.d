@@ -39,6 +39,7 @@
                     multi-term
                     org-mode
                     perspective
+                    powerline
                     psvn
                     pymacs
                     python-mode
