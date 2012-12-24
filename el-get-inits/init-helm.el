@@ -1,1 +1,1 @@
-(global-set-key (kbd C-c h) (quote helm-mini))
+(global-set-key (kbd "C-c h") (quote helm-mini))

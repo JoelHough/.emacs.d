@@ -21,15 +21,16 @@
                         (autoload 'helm-projectile "helm-projectile" "Use projectile with Helm instead of ido." t))
              :autoloads nil)))
 
-(setq my-packages '(ace-jump-mode
+(setq my-packages '(zenburn-theme
+                    ace-jump-mode
                     anything-rcodetools
                     auto-complete
                     autopair
                     coffee-mode
                     css-mode
+                    dash
                     edit-server
                     expand-region
-                    geiser
                     haskell-mode
                     helm
                     highlight-parentheses
@@ -57,10 +58,8 @@
                     textmate
                     slime
                     sunrise-commander
-                    smex
                     undo-tree
                     visible-mark
                     window-number
                     yaml-mode
-                    yasnippet
-                    zenburn-theme))
+                    yasnippet))

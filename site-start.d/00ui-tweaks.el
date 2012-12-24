@@ -40,10 +40,6 @@
       save-abbrevs t)
 (quietly-read-abbrev-file)
 
-;; Keep emacs Custom-settings in separate file
-(setq custom-file (expand-file-name "custom.el" dotfiles-dir))
-(load custom-file)
-
 ;; Saner RE syntax
 (require 're-builder)
 (setq reb-re-syntax 'string)
@@ -71,3 +67,5 @@
 ;; Use code-pagew so I can see characters like µ
 (require 'code-pages)
 
+;; I like using upcase-region
+(put 'upcase-region 'disabled nil)

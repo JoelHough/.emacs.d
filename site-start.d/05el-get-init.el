@@ -1,7 +1,7 @@
 ;; el-get stuff
 (add-to-list 'load-path (expand-file-name "el-get/el-get" dotfiles-dir))
 
-(setq el-get-user-package-directory (expand-file-name "el-get-init-files/" dotfiles-dir))
+(setq el-get-user-package-directory (expand-file-name "el-get-inits/" dotfiles-dir))
 
 (unless (require 'el-get nil t)
   (url-retrieve

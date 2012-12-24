@@ -6,4 +6,3 @@
 
 (autoload 'my-site-start (expand-file-name "my-site-start.el" dotfiles-dir) nil t)
 (my-site-start (expand-file-name "site-start.d/" dotfiles-dir))
-(put 'upcase-region 'disabled nil)
