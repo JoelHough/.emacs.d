@@ -9,3 +9,5 @@
 (global-set-key "\C-xQ" 'my-macro-query)
 
 (global-set-key "\C-c\C-g" 'magit-status)
+
+(global-set-key "\C-x\C-a" 'ack-and-a-half)
