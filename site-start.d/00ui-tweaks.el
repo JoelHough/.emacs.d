@@ -9,14 +9,6 @@
       mouse-wheel-progressive-speed nil
       mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
 
-;; ido, always
-(ido-mode t)
-(ido-everywhere t)
-(setq ido-enable-flex-matching t
-      ido-create-new-buffer 'always)
-(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
-;(global-set-key (kbd "C-x C-c") 'ido-switch-buffer)
-(global-set-key (kbd "C-x B") 'ibuffer)
 (global-set-key (kbd "C-x C-z") 'ff-find-other-file)
 
 ;; Keep backups in one place, and keep several versions
