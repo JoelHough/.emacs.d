@@ -61,3 +61,5 @@
 
 ;; I like using upcase-region
 (put 'upcase-region 'disabled nil)
+
+(setq ispell-program-name "aspell")
