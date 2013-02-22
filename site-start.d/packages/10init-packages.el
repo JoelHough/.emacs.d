@@ -30,6 +30,7 @@
                     css-mode
                     dash
                     edit-server
+                    evil
                     expand-region
                     grep-ed
                     haskell-mode
