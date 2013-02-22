@@ -31,6 +31,7 @@
                     dash
                     edit-server
                     expand-region
+                    grep-ed
                     haskell-mode
                     helm
                     highlight-parentheses
