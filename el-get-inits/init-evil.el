@@ -1,1 +1,1 @@
-(turn-on-evil-mode)
+(evil-mode)
