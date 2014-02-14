@@ -9,17 +9,18 @@
              :description "Jinja2 mode"
              :type github
              :pkgname "paradoxxxzero/jinja2-mode")
-      (:name projectile
-             :depends helm
-             :website "https://github.com/bbatsov/projectile"
-             :description "Project Interaction Library for Emacs"
-             :type github
-             :pkgname "bbatsov/projectile"
-             :prepare (progn
-                        (autoload 'projectile-mode "projectile" "Minor mode to assist project management and navigation." t)
-                        (autoload 'projectile-global-mode "projectile" nil t)
-                        (autoload 'helm-projectile "helm-projectile" "Use projectile with Helm instead of ido." t))
-             :autoloads nil)))
+;      (:name projectile
+;             :depends helm
+;             :website "https://github.com/bbatsov/projectile"
+;             :description "Project Interaction Library for Emacs"
+;             :type github
+;             :pkgname "bbatsov/projectile"
+;             :prepare (progn
+;                        (autoload 'projectile-mode "projectile" "Minor mode to assist project management and navigation." t)
+;                        (autoload 'projectile-global-mode "projectile" nil t)
+;                        (autoload 'helm-projectile "helm-projectile" "Use projectile with Helm instead of ido." t))
+;             :autoloads nil)))
+))
 
 (setq my-packages '(zenburn-theme
                     ace-jump-mode
@@ -29,11 +30,11 @@
                     coffee-mode
                     css-mode
                     dash
-                    edit-server
-                    evil
+                    ;edit-server
+                    ;evil
                     expand-region
                     grep-ed
-                    haskell-mode
+                    ;haskell-mode
                     helm
                     highlight-parentheses
                     inf-ruby
@@ -46,20 +47,21 @@
                     psvn
                     pymacs
                     python-mode
-                    quack
+                    ;quack
                     rainbow-delimiters
                     rainbow-mode
                     rcodetools
                     rhtml-mode
                     rinari
-                    rope
-                    ropemacs
-                    ropemode
+                    ;rope
+                    ;ropemacs
+                    ;ropemode
                     ruby-compilation
                     ruby-mode
-                    textmate
-                    slime
+                    smex
+                    ;slime
                     sunrise-commander
+                    textmate
                     undo-tree
                     visible-mark
                     window-number
