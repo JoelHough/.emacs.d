@@ -45,8 +45,8 @@
                     perspective
                     powerline
                     psvn
-                    pymacs
-                    python-mode
+                    ;pymacs
+                    ;python-mode
                     ;quack
                     rainbow-delimiters
                     rainbow-mode
