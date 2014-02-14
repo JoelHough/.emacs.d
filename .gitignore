@@ -6,3 +6,4 @@
 !el-get-inits/**
 !init.el
 !custom.el
+*.elc

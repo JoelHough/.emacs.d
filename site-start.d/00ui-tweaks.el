@@ -56,10 +56,20 @@
 ;; Tabs are evil
 (setq-default indent-tabs-mode nil)
 
+;; 8 is too much
+(setq-default tab-width 2)
+
+;; delete trailing whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; autoindent on enter
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
 ;; Use code-pagew so I can see characters like µ
 (require 'code-pages)
 
 ;; I like using upcase-region
 (put 'upcase-region 'disabled nil)
 
+;; srsly, who uses ispell?
 (setq ispell-program-name "aspell")
