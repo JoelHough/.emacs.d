@@ -1,3 +1,29 @@
+(defun ruby-model-property-docify (prop)
+  "Generate horrible, verbose model parameter doc comments from sane sexp"
+  (let* ((field-string (lambda (name val)
+                         (cond ((string-equal name "=") (format "%-11s \"example\": %S" "#" val))
+                               ((string-equal name ":") (format "%-11s \"type\": \"%s\"" "#" val))
+                               (t (format "%-11s \"%s\": %S" "#" name val)))))
+         (field-strings (lambda (fields)
+                         (if (cadr fields)
+                             (cons (funcall field-string (car fields) (cadr fields)) (funcall field-strings (cddr fields)))
+                           (list (format "%-11s \"description\": \"%s\"" "#" (car fields)))))))
+    (format "%-9s \"%s\": {
+%s
+%-9s }" "#" (car prop) (mapconcat 'identity (funcall field-strings (cdr prop)) ",\n") "#")))
+
+(defun ruby-model-docify (id desc props)
+  "Generate horrible, verbose model doc comments from sane sexps.
+e.g. (ruby-model-docify 'MyModel \"A fancy model\" '((id = 2 : integer \"the id\") (name = \"bob\" $ref \"UserName\" \"the name\")))"
+  (format "# @model %s
+#     {
+#       \"id\": \"%S\",
+#       \"description\": \"%s\",
+#       \"properties\": {
+%s
+#       }
+#     }" id id desc (mapconcat 'ruby-model-property-docify props ",\n")))
+
 (defun my-macro-query (arg)
   "Prompt for input using minibuffer during kbd macro execution.
     With prefix argument, allows you to select what prompt string to use.
