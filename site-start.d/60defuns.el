@@ -1,3 +1,13 @@
+(defun fc-eval-and-replace ()
+  "Replace the preceding sexp with its value."
+  (interactive)
+  (backward-kill-sexp)
+  (condition-case nil
+      (princ (eval (read (current-kill 0)))
+             (current-buffer))
+    (error (message "Invalid expression")
+           (insert (current-kill 0)))))
+
 (defun ruby-model-property-docify (prop)
   "Generate horrible, verbose model parameter doc comments from sane sexp"
   (let* ((field-string (lambda (name val)

@@ -1,3 +1,5 @@
+(global-set-key "\C-ce" 'fc-eval-and-replace)
+
 (global-set-key "\C-x\C-m" 'smex)
 
 (global-set-key "\C-w" 'backward-kill-word)
