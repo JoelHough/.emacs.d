@@ -1,5 +1,5 @@
 (require 'visible-mark)
-(setq visible-mark-max 2)
+(setq visible-mark-max 1)
 (defface my-visible-mark-face-1
   `((t (:background "#3b5bab" :foreground "white")))
   "Face for the mark."
