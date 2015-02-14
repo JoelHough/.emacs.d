@@ -10,33 +10,33 @@
         "xelatex -interaction nonstopmode %f"))
 
 ;; org-latex customization
-(require 'org-latex)
-(add-to-list 'org-export-latex-classes
-             '("koma-article"
-               "\\documentclass{scrartcl}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-(add-to-list 'org-export-latex-classes
-             '("koma-report"
-               "\\documentclass{scrreprt}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-(setq org-export-latex-default-packages-alist
-      '(("" "fontspec" t)
-        ("" "xunicode" t)
-        ("" "url" t)
-        ("" "rotating" t)
-        ("" "graphicx" t)
-        ("american" "babel" t)
-        ("babel" "csquotes" t)
-        ("" "soul" t)
-        ("xetex,setpagesize=false" "hyperref" nil)))
+;; (require 'org-latex)
+;; (add-to-list 'org-export-latex-classes
+;;              '("koma-article"
+;;                "\\documentclass{scrartcl}"
+;;                ("\\section{%s}" . "\\section*{%s}")
+;;                ("\\subsection{%s}" . "\\subsection*{%s}")
+;;                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;; (add-to-list 'org-export-latex-classes
+;;              '("koma-report"
+;;                "\\documentclass{scrreprt}"
+;;                ("\\section{%s}" . "\\section*{%s}")
+;;                ("\\subsection{%s}" . "\\subsection*{%s}")
+;;                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;; (setq org-export-latex-default-packages-alist
+;;       '(("" "fontspec" t)
+;;         ("" "xunicode" t)
+;;         ("" "url" t)
+;;         ("" "rotating" t)
+;;         ("" "graphicx" t)
+;;         ("american" "babel" t)
+;;         ("babel" "csquotes" t)
+;;         ("" "soul" t)
+;;         ("xetex,setpagesize=false" "hyperref" nil)))
 
 (add-hook 'org-mode-hook
           (lambda ()
@@ -72,4 +72,3 @@
         ("c" "Class Notes" entry (file
                                   ,(expand-file-name "school.org" org-directory))
          "* %^{Note} %^g %?\nAdded: %U")))
-
