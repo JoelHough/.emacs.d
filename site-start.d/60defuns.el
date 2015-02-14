@@ -1,3 +1,15 @@
+(defun plus-minus-indent ()
+  "Indents the current line to the previous line's indent, +/- 2.
+Good for indent-line-function"
+  ;(interactive)
+  (let ((current (current-indentation))
+        (previous (save-excursion (previous-logical-line) (current-indentation))))
+    (save-excursion
+      (cond
+       ((or (= current previous) (> current (+ previous 2))) (indent-line-to (+ previous 2)))
+       ((> current previous) (indent-line-to (max (- previous 2) 0)))
+       ((< current previous) (indent-line-to previous))))))
+
 (defun fc-eval-and-replace ()
   "Replace the preceding sexp with its value."
   (interactive)
@@ -109,4 +121,3 @@ a sound to be played"
           ((org-switch-to-buffer-other-window (&rest args) (apply 'switch-to-buffer args)))
         (org-capture))
       (error (delete-frame frame)))))
-
