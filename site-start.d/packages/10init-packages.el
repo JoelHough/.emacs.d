@@ -1,10 +1,5 @@
 (setq el-get-sources
-      '((:name ack-and-a-half
-              :website "https://github.com/jhelwig/ack-and-a-half"
-              :description "ack.el + full-ack.el = ack-and-a-half.el (Yet another emacs front-end to ack)"
-              :type github
-              :pkgname "jhelwig/ack-and-a-half")
-      (:name jinja2-mode
+      '((:name jinja2-mode
              :website "https://github.com/paradoxxxzero/jinja2-mode"
              :description "Jinja2 mode"
              :type github
@@ -22,20 +17,20 @@
 ;             :autoloads nil)))
 ))
 
-(setq my-packages '(zenburn-theme
+(setq my-packages '(zenburn
                     ace-jump-mode
                     anything-rcodetools
                     auto-complete
                     autopair
                     coffee-mode
-                    css-mode
+                    ;css-mode
                     dash
                     ;edit-server
                     ;evil
                     expand-region
                     grep-ed
                     ;haskell-mode
-                    helm
+                    ;helm
                     highlight-parentheses
                     inf-ruby
                     lua-mode
@@ -60,10 +55,10 @@
                     ruby-mode
                     smex
                     ;slime
-                    sunrise-commander
+                    ;sunrise-commander
                     textmate
                     undo-tree
-                    visible-mark
+                    ;visible-mark
                     window-number
                     yaml-mode
                     yasnippet))
